@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 1 - High-Low Game</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <style>
       [v-cloak] {
@@ -12,21 +14,36 @@
     </style>
   </head>
   <body>
-    <h1>Hi-Low</h1>
-    <p>Guess the number between 1 and 100</p>
-    <div id="app" v-cloak>
-      Your guess:
-      <input type="number" v-model.number="guess" @keyup.enter="submitGuess"></input>
-
-      <button type="submit" id="guess-btn" @click="submitGuess">Submit</button>
-      <p>Secret number: {{secretNum}}</p>
-      <div v-if="guesses.length > 0">
-        <p>Your guesses:</p>
-        <ul>
-          <li v-for="guess in guesses">{{ guess }}</li>
-        </ul>
+    <div class="game-wrapper">
+      <h1>Hi-Low</h1>
+      <h4>Guess the number between 1 and 100</h4>
+      <div id="app" v-cloak>
+        <p>Your guess:</p>
+        <input 
+          type="number" 
+          v-model.number="guess" 
+          @keyup.enter="submitGuess"
+        ></input>
+  
+        <button 
+          type="submit" 
+          class="start"
+          v-bind:class="{disabledBtn: gameOver}"
+          @click="submitGuess" 
+          v-bind:disabled="gameOver"
+        >
+          Submit
+        </button>
+        <div v-if="guesses.length > 0">
+          <h5>Your guesses:</h5>
+          <p>{{ guessesList }}</p>
+        </div>
+        <p>{{ 9 - guesses.length }} guesses remaining.</p>
+        <p v-bind:class="guessWrong ? 'wrong' : 'right'">{{ message }}</p>
+        <div>Player score: {{playerScore}}</div> <div>Computer score: {{computerScore}}</div>
+        <score-board v-bind:game-history="gameHistory"></score-board>
+        <button @click="resetGame" class="reset">New Game</button>
       </div>
-      <p>{{ message }}</p>
     </div>
   </body>
 </html>
