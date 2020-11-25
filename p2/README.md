@@ -29,7 +29,3 @@
 - <https://fonts.google.com/> - Roboto, Nerko One, Ubuntu fonts
 - <https://unsplash.com/> - all recipe images
 - <https://fontawesome.com/> - icons
-
-## Notes for instructor
-
-_Any notes for me to refer to while grading; if none, omit this section_
