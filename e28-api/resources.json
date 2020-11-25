@@ -8,6 +8,10 @@
       "type": "text",
       "validators": ["required"]
     },
+    "imageURL": {
+      "type": "string",
+      "validators": []
+    },
     "portions": {
       "type": "integer",
       "validators": ["required"]
