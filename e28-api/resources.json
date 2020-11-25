@@ -23,6 +23,10 @@
     "ingredients": {
       "type": "text",
       "validators": ["required"]
+    },
+    "isFavorite": {
+      "type": "boolean",
+      "validators": []
     }
   }
 }
