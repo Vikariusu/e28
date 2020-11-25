@@ -1,0 +1,24 @@
+{
+  "recipe": {
+    "title": {
+      "type": "string",
+      "validators": ["required"]
+    },
+    "description": {
+      "type": "text",
+      "validators": ["required"]
+    },
+    "portions": {
+      "type": "integer",
+      "validators": ["required"]
+    },
+    "time": {
+      "type": "integer",
+      "validators": ["required"]
+    },
+    "ingredients": {
+      "type": "text",
+      "validators": ["required"]
+    }
+  }
+}
