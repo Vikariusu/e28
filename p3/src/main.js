@@ -6,6 +6,8 @@ import HomePage from '@/components/pages/HomePage.vue';
 import RecipeDetail from '@/components/pages/RecipeDetail.vue';
 import AddRecipe from '@/components/pages/AddRecipe.vue';
 import FavoriteList from '@/components/pages/FavoriteList.vue';
+import LoginPage from '@/components/pages/LoginPage.vue';
+import RegisterPage from '@/components/pages/RegisterPage.vue';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import store from '@/common/store';
@@ -22,6 +24,8 @@ const router = new VueRouter({
     { path: '/add', component: AddRecipe },
     { path: '/recipes/:id', component: RecipeDetail, props: true },
     { path: '/favorite', component: FavoriteList },
+    { path: '/login', component: LoginPage },
+    { path: '/register', component: RegisterPage },
   ],
   mode: 'history',
 });

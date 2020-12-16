@@ -1,7 +1,7 @@
-# Project 2
+# Project 3
 
 - By: Weronika Tomaszewska
-- Production URL: <http://e28p2.wtomaszewska.me/>
+- Production URL: <http://e28p3.wtomaszewska.me/>
 
 ## Pages summary
 

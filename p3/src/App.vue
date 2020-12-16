@@ -18,6 +18,7 @@
       </ul>
     </nav>
     <router-view
+      class="page-wrapper"
       v-bind:recipes="recipes"
       v-on:update-recipes="fetchRecipes()"
     ></router-view>
@@ -96,6 +97,10 @@ a:visited {
   align-content: center;
 }
 
+.page-wrapper {
+  margin: 20px 40px;
+}
+
 .nav-wrapper h1 {
   color: #293241;
   font-family: "Nerko One", cursive;
@@ -107,5 +112,23 @@ a:visited {
 .nav-wrapper h1,
 ul {
   text-align: center;
+}
+
+.btn-submit {
+  background: #33673B;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+input {
+  display: block;
+  padding: 6px;
+  border: 1px solid #AAAAAA;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 </style>

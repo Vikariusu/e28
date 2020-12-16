@@ -8,7 +8,8 @@ export default new Vuex.Store({
   state: {
     favorites: [],
     recipes: [],
-    favoriteCount: 0
+    favoriteCount: 0,
+    isLoggedIn: false
   },
   mutations: {
     setRecipes(state, payload) {

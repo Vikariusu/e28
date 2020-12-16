@@ -38,10 +38,13 @@ export default {
       console.log(this.currentRecipe);
       event.preventDefault();
       axios
-        .put(`http://e28-api.wtomaszewska.me/recipe/${this.currentRecipe.id}`, {
-          ...this.currentRecipe,
-          isFavorite: this.currentRecipe.isFavorite === "true",
-        })
+        .put(
+          `http://e28-api.wtomaszewska.me/recipe/${this.currentRecipe.id}`,
+          {
+            ...this.currentRecipe,
+            isFavorite: this.currentRecipe.isFavorite === "true",
+          }
+        )
         .then((response) => {
           this.currentRecipe = response.data.recipe;
           console.log(this.currentRecipe);

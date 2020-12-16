@@ -1,5 +1,5 @@
 <template>
-  <div class="recipe-from">
+  <div class="recipe-form">
     <h2>Add a Recipe</h2>
     <div>
       <label for="title">Title</label>
@@ -80,7 +80,7 @@
       </div>
     </div>
 
-    <button @click="addRecipe">Add Recipe</button>
+    <button @click="addRecipe" class="btn-submit">Add Recipe</button>
   </div>
 </template>
 
@@ -104,17 +104,17 @@ export default {
   },
   methods: {
     addRecipe() {
-      if (this.validate()) {
-        axios
-          .post("http://e28-api.wtomaszewska.me/recipe", this.recipe)
-          .then((response) => {
-            if (response.data.errors) {
-              console.log(response.data.errors);
-            } else {
-              this.$emit("update-recipes");
-            }
-          });
-      }
+      // if (this.validate()) {
+      axios
+        .post("http://e28-api.wtomaszewska.me/recipe", this.recipe)
+        .then((response) => {
+          if (response.data.errors) {
+            console.log(response.data.errors);
+          } else {
+            this.$emit("update-recipes");
+          }
+        });
+      // }
     },
     validate() {
       let validator = new Validator(this.recipe, {
@@ -140,16 +140,16 @@ export default {
 <style scoped>
 label {
   display: block;
-  width: 80px;
   margin-top: 14px;
-}
-
-.recipe-form div {
-  margin: 14px;
 }
 
 .form-warning {
   color: red;
   margin-top: 4px;
+}
+
+.input {
+  padding: 10px;
+  margin: 100px;
 }
 </style>
