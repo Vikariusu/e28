@@ -104,17 +104,17 @@ export default {
   },
   methods: {
     addRecipe() {
-      // if (this.validate()) {
-      axios
-        .post("http://e28-api.wtomaszewska.me/recipe", this.recipe)
-        .then((response) => {
-          if (response.data.errors) {
-            console.log(response.data.errors);
-          } else {
-            this.$emit("update-recipes");
-          }
-        });
-      // }
+      if (this.validate()) {
+        axios
+          .post("http://e28-api.wtomaszewska.me/recipe", this.recipe)
+          .then((response) => {
+            if (response.data.errors) {
+              console.log(response.data.errors);
+            } else {
+              this.$emit("update-recipes");
+            }
+          });
+      }
     },
     validate() {
       let validator = new Validator(this.recipe, {

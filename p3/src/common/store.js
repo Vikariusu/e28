@@ -9,11 +9,15 @@ export default new Vuex.Store({
     favorites: [],
     recipes: [],
     favoriteCount: 0,
-    isLoggedIn: false
+    isLoggedIn: false,
+    user: null
   },
   mutations: {
     setRecipes(state, payload) {
       state.recipes = payload;
+    },
+    setUser(state, payload) {
+      state.user = payload;
     },
   },
   actions: {
