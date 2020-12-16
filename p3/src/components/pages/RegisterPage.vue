@@ -32,7 +32,8 @@ export default {
     };
   },
   methods: {
-    register() {
+    register(e) {
+      e.preventDefault();
       axios
         .post("register", {
           email: this.email,
