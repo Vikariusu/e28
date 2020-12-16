@@ -34,10 +34,9 @@ export default {
     return {
       page: "home",
       recipes: [],
-      links: ["Add a Recipe", "Favorite Recipes", "Login", "Register"],
+      links: ["Add a Recipe", "Login", "Register"],
       paths: {
         "Add a Recipe": "/add",
-        "Favorite Recipes": "/favorite",
         Login: "/login",
         Register: "/register",
       },
@@ -53,7 +52,6 @@ export default {
     },
   },
   mounted() {
-    // this.fetchRecipes();
     this.$store.dispatch("fetchRecipes");
   },
 };

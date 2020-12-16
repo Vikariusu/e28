@@ -5,7 +5,6 @@ import VueRouter from "vue-router";
 import HomePage from "@/components/pages/HomePage.vue";
 import RecipeDetail from "@/components/pages/RecipeDetail.vue";
 import AddRecipe from "@/components/pages/AddRecipe.vue";
-import FavoriteList from "@/components/pages/FavoriteList.vue";
 import LoginPage from "@/components/pages/LoginPage.vue";
 import RegisterPage from "@/components/pages/RegisterPage.vue";
 import AccessDenied from "@/components/pages/AccessDenied.vue";
@@ -22,15 +21,14 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 const router = new VueRouter({
   routes: [
     { path: "/", component: HomePage },
-    { path: "/add", component: AddRecipe },
-    { path: "/recipes/:id", component: RecipeDetail, props: true },
     {
-      path: "/favorite",
-      component: FavoriteList,
+      path: "/add",
+      component: AddRecipe,
       meta: {
         requiresAuth: true,
       },
     },
+    { path: "/recipes/:id", component: RecipeDetail, props: true },
     { path: "/login", component: LoginPage },
     { path: "/register", component: RegisterPage },
     {

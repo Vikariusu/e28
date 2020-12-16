@@ -10,6 +10,7 @@
         v-for="(error, i) in errors.title"
         v-bind:key="i"
         class="form-warning"
+        id="title"
       >
         {{ error }}
       </div>
@@ -80,7 +81,7 @@
       </div>
     </div>
 
-    <button @click="addRecipe" class="btn-submit">Add Recipe</button>
+    <button @click="addRecipe" class="btn-submit add-recipe">Add Recipe</button>
   </div>
 </template>
 

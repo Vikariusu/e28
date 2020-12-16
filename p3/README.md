@@ -7,13 +7,14 @@
 
 - HomePage (contains a list of recipes)
 - RecipeDetail
-- AddRecipe
+- AddRecipe (protected route with form validation)
+- LoginPage
+- RegisterPage
 
 ## SFC summary
 
 - `App.vue`
 - `AddRecipe.vue`
-- `FavoriteList.vue`
 - `HomePage.vue`
 - `RecipeCard.vue`
 - `RecipeDetail.vue`
@@ -22,10 +23,10 @@
 
 - Adding new recipes
 - Fetching existing recipes
-- Adding recipes to a favorite list
 
 ## Outside resources
 
 - <https://fonts.google.com/> - Roboto, Nerko One, Ubuntu fonts
 - <https://unsplash.com/> - all recipe images
 - <https://fontawesome.com/> - icons
+- <https://www.bonappetit.com/recipe/kale-pesto-with-whole-wheat-pasta/> - recipe used for testing
