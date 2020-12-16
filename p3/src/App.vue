@@ -34,10 +34,12 @@ export default {
     return {
       page: "home",
       recipes: [],
-      links: ["Add a Recipe", "Favorite Recipes"],
+      links: ["Add a Recipe", "Favorite Recipes", "Login", "Register"],
       paths: {
         "Add a Recipe": "/add",
         "Favorite Recipes": "/favorite",
+        Login: "/login",
+        Register: "/register",
       },
     };
   },
@@ -115,7 +117,7 @@ ul {
 }
 
 .btn-submit {
-  background: #33673B;
+  background: #33673b;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -127,7 +129,7 @@ ul {
 input {
   display: block;
   padding: 6px;
-  border: 1px solid #AAAAAA;
+  border: 1px solid #aaaaaa;
   border-radius: 4px;
   margin-bottom: 20px;
 }
